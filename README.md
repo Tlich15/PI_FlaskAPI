@@ -40,3 +40,26 @@ Modifier
 │   └── ...
 │
 └── README.md
+
+
+
+=> API Hugging Face:
+Utilise le modèle gpt2 (ou tout autre modèle compatible avec text generation).
+
+Exemple de requête POST :
+
+POST http://localhost:5001/api/chat
+{
+  "message": "Bonjour, que peux-tu faire ?"
+}
+
+
+🧪 Exemple de message Angular → Flask
+typescript
+Copier
+Modifier
+this.http.post('http://localhost:5001/api/chat', {
+  message: "Bonjour"
+}).subscribe(res => {
+  console.log(res);
+});
